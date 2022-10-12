@@ -1,4 +1,5 @@
-var Date = (moment().format("MMMM D, YYYY"))
+var currentTime = moment().hour()
+var Date = (moment().format("MMMM D, YYYY, h:mm a"))
 $("#currentDay").text(Date);
 
 $(".saveBtn").on("click", function() {
@@ -18,6 +19,25 @@ $("#14 .plan").val(localStorage.getItem("14"));
 $("#15 .plan").val(localStorage.getItem("15"));
 $("#16 .plan").val(localStorage.getItem("16"));
 $("#17 .plan").val(localStorage.getItem("17"));
+ 
+
+
+$(".time-block").each(function() {
+   
+    var dataTime = $(this).attr("id");
+    console.log(dataTime)
+    
+    if (dataTime > currentTime) {
+        $(this).addClass("future");
+    }
+    else if (dataTime == currentTime) {
+        $(this).addClass("present");
+    }
+    else if (dataTime < currentTime) {
+        $(this).addClass("past");
+    }
+})
+
 
 
 
