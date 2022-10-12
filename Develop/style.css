@@ -69,3 +69,13 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+.col-1 {
+  border-top: solid black 2px;
+  border-right: solid darkgray 2px;
+  text-align: right;
+}
+
+.col-10 {
+  border-top: solid black 2px;
+}
