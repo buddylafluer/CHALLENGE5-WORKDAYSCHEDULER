@@ -72,7 +72,7 @@ textarea{
 
 .col-1 {
   border-top: solid black 2px;
-  border-right: solid darkgray 2px;
+  border-right: solid darkgray 5px;
   text-align: right;
 }
 
